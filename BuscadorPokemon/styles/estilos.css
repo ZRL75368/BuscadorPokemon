@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
     overflow: hidden;
     cursor: default;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-image: url('../src/imagen-fondo.png');
+    background-image: url('../src/imagen-fondo.gif');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -39,6 +42,7 @@ header {
     cursor: pointer;
     animation-name: animacionEntrada-titulo-web;
     animation-duration: 3.2s;
+    font-size: 20px;
 }
 
 input::placeholder {
@@ -57,13 +61,79 @@ input::placeholder {
     transition: background-color 0.3s ease;
     animation-name: animacionEntrada-titulo-web;
     animation-duration: 4s;
+    font-size: 30px;
 }
 
 #boton-enviar:hover{
    background-color: rgb(14, 42, 94);
-   color: rgb(0, 116, 199);
+   color: rgb(24, 26, 28);
    transform: scale(1.1);
    cursor: pointer;
+}
+
+.textoTitulos{
+    text-align: center;
+    color: rgb(14, 42, 94);
+    font-weight: bold;
+    font-size: 20px;
+    animation-name: animacion-texto-titulos;
+    animation-duration: 2.4s;
+}
+
+#imagenPokemon{
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    animation-name: animacion-imagen-pokemon;
+    animation-duration: 3s;
+}
+
+#boton-volver{
+    display: block;
+    background-color: rgb(22, 66, 148);
+    border: none;
+    border-radius: 100px;
+    margin: auto;
+    color: rgb(254, 254, 254);
+    width: auto;
+    margin-top: 10PX;
+    transition: background-color 0.3s ease;
+    animation-name: animacionEntrada-boton-web;
+    animation-duration: 4s;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#boton-volver:hover{
+   background-color: rgb(14, 42, 94);
+   color: rgb(199, 199, 199);
+   transform: scale(1.1);
+   cursor: pointer;
+   border: 10px;
+   border-color: blacks;
+   border-radius: 100px;
+}
+
+#nombrePokemon{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color:rgb(217, 197, 11);
+    font-weight: bold;
+    text-shadow: -1.5px 1.5px rgba(7, 23, 78, 0.5);
+    animation-name: animacion-texto-titulos;
+    animation-duration: 2.4s;
+}
+
+#idPokemon{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color:rgb(217, 197, 11);
+    font-weight: bold;
+    text-shadow: -1.5px 1.5px rgba(7, 23, 78, 0.5);
+    animation-name: animacion-texto-titulos;
+    animation-duration: 2.4s;
 }
 
 @keyframes animacionEntrada-titulo-web{
@@ -74,6 +144,40 @@ input::placeholder {
 
     to{
         transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes animacionEntrada-boton-web{
+    from{
+        transform: scale(0);
+        opacity: 0.5;
+    }
+
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes animacion-imagen-pokemon{
+    from{
+        transform: translateY(120px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes animacion-texto-titulos{
+   from{
+        transform: translateY(-120px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0px);
         opacity: 1;
     }
 }
