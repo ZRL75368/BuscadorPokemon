@@ -9,11 +9,15 @@ html, body {
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    background-image: url('../src/imagen-fondo.gif');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+/* Elimina el background-image del body y añade esto: */
+#video-fondo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Lo manda detrás de todo el contenido */
+    object-fit: cover;
 }
 
 header {
